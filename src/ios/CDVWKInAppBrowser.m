@@ -280,7 +280,7 @@ static CDVWKInAppBrowser* instance = nil;
     }
     _waitForBeforeload = ![_beforeload isEqualToString:@""];
     
-    [self.inAppBrowserViewController navigateTo:url headers:headers]
+    [self.inAppBrowserViewController navigateTo:url headers:headers];
     if (!browserOptions.hidden) {
         [self show:nil withNoAnimate:browserOptions.hidden];
     }
