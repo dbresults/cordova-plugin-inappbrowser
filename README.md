@@ -21,11 +21,27 @@ description: Open an in-app browser window.
 #         under the License.
 -->
 
-|AppVeyor|Travis CI|
-|:-:|:-:|
-|[![Build status](https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-inappbrowser?branch=master)](https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-inappbrowser)|[![Build Status](https://travis-ci.org/apache/cordova-plugin-inappbrowser.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-inappbrowser)|
-
 # cordova-plugin-inappbrowser
+
+## BRANCH NOTES : 
+by: Jonathan Lui
+
+`custom-headers-support branch` adds a new headers option to the open method. This allows sending arbitrary headers when opening a URL.
+
+This code is based on an un-approved (at the time of this commit) [pull request #363](https://github.com/apache/cordova-plugin-inappbrowser/pull/363) for cordova-plugin-inappbrowser, but applied to the current version being used in OutSystems
+
+---
+
+Opens a URL in a new `InAppBrowser` instance, the current browser
+instance, or the system browser.
+
+    var ref = cordova.InAppBrowser.open(url, target, options);
+
+- __headers__: Headers for the http request. Optional. _(String)_ or _(javascript object)_
+    - _(String)_: headers must be in `header=value` form, separated by commas : `header1=value1,header2=value2`. don't use _(String)_ if commas or equals can be contained in headers or values.
+    - _(javascript object)_: headers are stored in object's properties like this `{ 'header1': 'value1', 'header2': 'value2'}`. this storage always works even if headers contain commas or equals.
+
+---
 
 :warning: This plugin is SUPPORTED by OutSystems. Customers entitled to Support Services may obtain assistance through Support.
 
