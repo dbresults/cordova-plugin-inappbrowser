@@ -35,7 +35,7 @@ This code is based on an un-approved (at the time of this commit) [pull request 
 Opens a URL in a new `InAppBrowser` instance, the current browser
 instance, or the system browser.
 
-    var ref = cordova.InAppBrowser.open(url, target, options);
+    var ref = cordova.InAppBrowser.open(url, target, options, headers);
 
 - __headers__: Headers for the http request. Optional. _(String)_ or _(javascript object)_
     - _(String)_: headers must be in `header=value` form, separated by commas : `header1=value1,header2=value2`. don't use _(String)_ if commas or equals can be contained in headers or values.
