@@ -26,7 +26,7 @@ description: Open an in-app browser window.
 ## BRANCH NOTES : 
 by: Jonathan Lui
 
-`custom-headers-support branch` adds a new headers option to the open method. This allows sending arbitrary headers when opening a URL.
+`custom-headers-support` branch adds a new headers option to the open method. This allows sending arbitrary headers when opening a URL.
 
 This code is based on an un-approved (at the time of this commit) [pull request #363](https://github.com/apache/cordova-plugin-inappbrowser/pull/363) for cordova-plugin-inappbrowser, but applied to the current version being used in OutSystems
 
